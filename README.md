@@ -25,7 +25,7 @@ During mini squads, the text is not shown, but you can set it yourself in the co
 
 ### Screenshot / Скриншот
 
-![Plugin Screenshot]()
+![Plugin Screenshot](plugin.png)
 
 ---
 
