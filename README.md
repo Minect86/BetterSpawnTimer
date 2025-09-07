@@ -6,6 +6,7 @@
 ![Framework Exiled](https://img.shields.io/badge/Framework-Exiled-FF0000?style=flat&labelColor=990000)
 
 - **Exiled version:** `9.8.0`
+- **SCP:SL version:** `14.1.3`
 
 ## Description / Описание
 
