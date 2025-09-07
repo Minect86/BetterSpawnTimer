@@ -6,8 +6,8 @@
 
 A simple plugin that shows the time until the nearest squad arrives.  
 The color depends on the squad type:  
-- **Mobile Task Force** — blue  
-- **Chaos Insurgency** — green  
+- **Mobile Task Force** - blue  
+- **Chaos Insurgency** - green  
 
 When the squad arrives, the time is replaced with the squad type text, for example, **Mobile Task Force** or **Chaos Insurgency**.  
 During mini squads, the text is not shown, but you can set it yourself in the config.  
