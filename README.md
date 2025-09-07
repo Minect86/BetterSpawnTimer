@@ -2,6 +2,9 @@
 ![C# Language](https://img.shields.io/badge/Language-C%23-8A2BE2?style=flat&labelColor=6A1FBF&logo=csharp&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-228B22?style=flat&labelColor=1C6B1C)](https://github.com/Minect86/BetterSpawnTimer/blob/master/LICENSE.txt)
 ![Version](https://img.shields.io/badge/Version-1.0.0-1E90FF?style=flat&labelColor=1870CC)
+
+- **EXILED VERSION:** `9.8.0`
+
 ## Description / Описание
 
 A simple plugin that shows the time until the nearest squad arrives.  
