@@ -45,4 +45,4 @@ mtf_time_color: '#6D9FF7'
 ci_time_color: '#608F38'
 mtf_mini: ' '
 ci_mini: ' '
-height: '\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n'
+height: 33
