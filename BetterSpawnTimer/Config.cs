@@ -12,5 +12,6 @@ namespace BetterSpawnTimer
         public string ci_time_color { get; set; } = "#608F38";
         public string mtf_mini { get; set; } = " ";
         public string ci_mini { get; set; } = " ";
+        public string height { get; set; } = "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n";
     }
 }
