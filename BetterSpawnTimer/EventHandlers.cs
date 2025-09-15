@@ -33,7 +33,7 @@ namespace BetterSpawnTimer
                     .Where(p => p.Role.Type == RoleTypeId.Spectator)
                     .ToList()
                     .ForEach(p => p.ShowHint($"<b><size=50%>{TimeToSpawn()}</size></b>" +
-                    Plugin.Instance.Config.height, 1.25f));
+                    string.Concat(Enumerable.Repeat("\r\n", Plugin.Instance.Config.height)), 1.25f));
             }
         }
 
