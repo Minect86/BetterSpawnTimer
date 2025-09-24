@@ -5,7 +5,7 @@
 [![Game SCP:SL](https://img.shields.io/badge/Game-SCP:SL-FFA500?style=flat&labelColor=CC8400)](https://store.steampowered.com/app/700330/SCP_Secret_Laboratory/)
 [![Framework Exiled](https://img.shields.io/badge/Framework-Exiled-FF0000?style=flat&labelColor=990000)](https://github.com/ExMod-Team/EXILED)
 
-- **Exiled version:** `9.8.1`
+- **Exiled version:** `9.9.1`
 - **SCP:SL version:** `14.1.4`
 
 ## Description / Описание
