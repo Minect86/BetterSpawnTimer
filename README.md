@@ -59,11 +59,11 @@ text_formatting: '<b><size=50%>%timer%</size></b>'
 hint_height: 33
 
 #--- For Ruei ---
-#Height for Hint
+# Height for Hint
 postion: 970
 
 #--- For HSM ---
-#Hint confis
+# Hint confis
 x_pos: 0
 y_pos: 30
 alignment: Center
