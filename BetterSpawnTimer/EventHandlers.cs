@@ -29,10 +29,15 @@ namespace BetterSpawnTimer
             while (true)
             {
                 yield return Timing.WaitForSeconds(1f);
+
+                string text = Plugin.Instance.Config.TextFormatting;
+                if (text.Contains("%timer%"))
+                    text = text.Replace("%timer%", TimeToSpawn());
+
                 Player.List
                     .Where(p => p.Role.Type == RoleTypeId.Spectator)
                     .ToList()
-                    .ForEach(p => p.ShowHint($"<b><size=50%>{TimeToSpawn()}</size></b>" +
+                    .ForEach(p => p.ShowHint(text +
                     string.Concat(Enumerable.Repeat("\r\n", Plugin.Instance.Config.HintHeight)), 1.25f));
             }
         }

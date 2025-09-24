@@ -1,73 +1,44 @@
 ﻿using Exiled.API.Features;
 using Exiled.API.Features.Waves;
 using Exiled.Events.EventArgs.Server;
-using HintServiceMeow.Core.Utilities;
-using MEC;
+using RueI.Displays;
+using RueI.Elements;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using Hint = HintServiceMeow.Core.Models.Hints.Hint;
 
-namespace BetterSpawnTimer_HSM
+namespace BetterSpawnTimer_Ruei
 {
     public class EventHandlers
     {
-        private CoroutineHandle _timerCoroutine;
+        private AutoElement _timerAutoElement;
 
-        public void OnWaitingForPlayers() => KillCoroutine();
-        public void OnRoundStarted() => _timerCoroutine = Timing.RunCoroutine(TimerEnumerator());
-        public void OnRestartingRound() => KillCoroutine();
-        public void OnRoundEnded(RoundEndedEventArgs ev) => KillCoroutine();
+        public void OnWaitingForPlayers() => KillAutoElement();
+        public void OnRoundStarted() => StartAutoElement();
+        public void OnRestartingRound() => KillAutoElement();
+        public void OnRoundEnded(RoundEndedEventArgs ev) => KillAutoElement();
 
-        private void KillCoroutine()
+        private void KillAutoElement()
         {
-            if (_timerCoroutine.IsRunning)
-                Timing.KillCoroutines(_timerCoroutine);
+            _timerAutoElement?.Disable();
+            _timerAutoElement = null;
         }
 
-        private IEnumerator<float> TimerEnumerator()
+        private void StartAutoElement()
         {
-            while (true)
-            {
-                yield return Timing.WaitForSeconds(1f);
-                foreach (Player pl in Player.List)
-                {
-                    UpdateHint(pl);
-                }
-            }
-        }
+            _timerAutoElement = new(
+                Roles.Spectator,
+                core => new DynamicElement(
+                    c => Plugin.Instance.Config.TextFormatting.Replace("%timer%", TimeToSpawn()),
+                    position: Plugin.Instance.Config.Postion
+                )
+            );
 
-        private Hint GetOrCreateHint(Player player)
-        {
-            PlayerDisplay playerDisplay = PlayerDisplay.Get(player);
+            _timerAutoElement.UpdateEvery = new AutoElement.PeriodicUpdate(
+                time: TimeSpan.FromSeconds(1),
+                priority: 10
+            );
 
-            if (playerDisplay.GetHint($"BST-{player.UserId}") is not Hint hint)
-            {
-                hint = new Hint
-                {
-                    Id = $"BST-{player.UserId}",
-                    XCoordinate = Plugin.Instance.Config.XPos,
-                    YCoordinate = Plugin.Instance.Config.YPos,
-                    Alignment = Plugin.Instance.Config.Alignment,
-                    YCoordinateAlign = Plugin.Instance.Config.VerticalAlign,
-                    Hide = true
-                };
-                playerDisplay.AddHint(hint);
-            }
-
-            return hint;
-        }
-
-        private void UpdateHint(Player player)
-        {
-            Hint hint = GetOrCreateHint(player);
-
-            string text = Plugin.Instance.Config.TextFormatting;
-            if (text.Contains("%timer%"))
-                text = text.Replace("%timer%", TimeToSpawn());
-
-            hint.Text = text;
-            hint.Hide = player.Role.Type != PlayerRoles.RoleTypeId.Spectator;
+            _timerAutoElement.Roles = Roles.Spectator;
         }
 
         private string TimeToSpawn()

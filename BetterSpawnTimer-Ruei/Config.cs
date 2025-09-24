@@ -1,7 +1,7 @@
 ﻿using Exiled.API.Interfaces;
 using System.ComponentModel;
 
-namespace BetterSpawnTimer
+namespace BetterSpawnTimer_Ruei
 {
     public class Config : IConfig
     {
@@ -30,6 +30,6 @@ namespace BetterSpawnTimer
         public string TextFormatting { get; set; } = "<b><size=50%>%timer%</size></b>";
 
         [Description("Height for Hint")]
-        public int HintHeight { get; set; } = 33;
+        public float Postion { get; set; } = 970;
     }
 }

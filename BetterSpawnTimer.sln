@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterSpawnTimer", "BetterS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterSpawnTimer-HSM", "BetterSpawnTimer-HSM\BetterSpawnTimer-HSM.csproj", "{9E50C814-A69A-4211-B2CF-9D9316AACF43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterSpawnTimer-Ruei", "BetterSpawnTimer-Ruei\BetterSpawnTimer-Ruei.csproj", "{8C12F80D-3BC4-4395-AD53-B0DCD7E47B76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9E50C814-A69A-4211-B2CF-9D9316AACF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E50C814-A69A-4211-B2CF-9D9316AACF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E50C814-A69A-4211-B2CF-9D9316AACF43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C12F80D-3BC4-4395-AD53-B0DCD7E47B76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C12F80D-3BC4-4395-AD53-B0DCD7E47B76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C12F80D-3BC4-4395-AD53-B0DCD7E47B76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C12F80D-3BC4-4395-AD53-B0DCD7E47B76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
