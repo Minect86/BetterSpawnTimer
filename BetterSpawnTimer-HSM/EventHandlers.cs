@@ -1,40 +1,71 @@
 ﻿using Exiled.API.Features;
 using Exiled.API.Features.Waves;
 using Exiled.Events.EventArgs.Server;
+using HintServiceMeow.Core.Utilities;
 using MEC;
-using PlayerRoles;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Hint = HintServiceMeow.Core.Models.Hints.Hint;
 
-namespace BetterSpawnTimer
+namespace BetterSpawnTimer_HSM
 {
     public class EventHandlers
     {
-        private CoroutineHandle _coroutineTimer;
+        private CoroutineHandle _timerCoroutine;
 
-        public void OnWaintingForPlayers() => KillCoroutine();
-        public void OnRoundStarted() => _coroutineTimer = Timing.RunCoroutine(BetterSpawnTimer());
+        public void OnWaitingForPlayers() => KillCoroutine();
+        public void OnRoundStarted() => _timerCoroutine = Timing.RunCoroutine(TimerEnumerator());
         public void OnRestartingRound() => KillCoroutine();
         public void OnRoundEnded(RoundEndedEventArgs ev) => KillCoroutine();
 
-        public void KillCoroutine()
+        private void KillCoroutine()
         {
-            if (Timing.IsRunning(_coroutineTimer))
-                Timing.KillCoroutines(_coroutineTimer);
+            if (_timerCoroutine.IsRunning)
+                Timing.KillCoroutines(_timerCoroutine);
         }
 
-        private IEnumerator<float> BetterSpawnTimer()
+        private IEnumerator<float> TimerEnumerator()
         {
             while (true)
             {
-                yield return Timing.WaitForSeconds(1f);
-                Player.List
-                    .Where(p => p.Role.Type == RoleTypeId.Spectator)
-                    .ToList()
-                    .ForEach(p => p.ShowHint($"<b><size=50%>{TimeToSpawn()}</size></b>" +
-                    string.Concat(Enumerable.Repeat("\r\n", Plugin.Instance.Config.HintHeight)), 1.25f));
+                yield return Timing.WaitForSeconds(0.5f);
+                foreach (Player pl in Player.List)
+                {
+                    UpdateHint(pl);
+                }
             }
+        }
+
+        private Hint GetOrCreateHint(Player player)
+        {
+            PlayerDisplay playerDisplay = PlayerDisplay.Get(player);
+
+            if (playerDisplay.GetHint($"BST-{player.UserId}") is not Hint hint)
+            {
+                hint = new Hint
+                {
+                    Id = $"BST-{player.UserId}",
+                    XCoordinate = Plugin.Instance.Config.XPos,
+                    YCoordinate = Plugin.Instance.Config.YPos,
+                    Alignment = Plugin.Instance.Config.Alignment,
+                    YCoordinateAlign = Plugin.Instance.Config.VerticalAlign,
+                    Hide = true
+                };
+                playerDisplay.AddHint(hint);
+            }
+
+            return hint;
+        }
+
+        private void UpdateHint(Player player)
+        {
+            Hint hint = GetOrCreateHint(player);
+            hint.Text = $"<b><size=50%>{TimeToSpawn()}</size></b>";
+            if (player.Role.Type == PlayerRoles.RoleTypeId.Spectator)
+                hint.Hide = false;
+            else
+                hint.Hide = true;
         }
 
         private string TimeToSpawn()

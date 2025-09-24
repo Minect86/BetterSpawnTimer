@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF91FB13-BBDA-4340-9716-74775A4CD4EF}</ProjectGuid>
+    <ProjectGuid>{9E50C814-A69A-4211-B2CF-9D9316AACF43}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BetterSpawnTimer</RootNamespace>
-    <AssemblyName>BetterSpawnTimer</AssemblyName>
+    <RootNamespace>BetterSpawnTimer_HSM</RootNamespace>
+    <AssemblyName>BetterSpawnTimer-HSM</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,49 +33,49 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>..\BetterSpawnTimer\bin\Debug\CommandSystem.Core.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.API">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Exiled.API.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Exiled.API.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CreditTags">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Exiled.CreditTags.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Exiled.CreditTags.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CustomItems">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Exiled.CustomItems.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Exiled.CustomItems.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.CustomRoles">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Exiled.CustomRoles.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Exiled.CustomRoles.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Events">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Exiled.Events.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Exiled.Events.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Loader">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Exiled.Loader.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Exiled.Loader.dll</HintPath>
     </Reference>
     <Reference Include="Exiled.Permissions">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Exiled.Permissions.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Exiled.Permissions.dll</HintPath>
     </Reference>
     <Reference Include="HintServiceMeow-Exiled">
-      <HintPath>..\..\..\..\Downloads\HintServiceMeow-Exiled.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\HintServiceMeow-Exiled.dll</HintPath>
     </Reference>
     <Reference Include="LabApi">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\LabApi.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\LabApi.dll</HintPath>
     </Reference>
     <Reference Include="Mirror">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\Mirror.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\Mirror.dll</HintPath>
     </Reference>
     <Reference Include="NorthwoodLib">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\NorthwoodLib.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\NorthwoodLib.dll</HintPath>
     </Reference>
     <Reference Include="PluginAPI">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\PluginAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="RueI">
-      <HintPath>..\..\..\..\Downloads\RueI.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\PluginAPI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,13 +86,13 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
     <Reference Include="YamlDotNet">
-      <HintPath>..\..\minect_plugin\minect_plugin\bin\Debug\YamlDotNet.dll</HintPath>
+      <HintPath>..\BetterSpawnTimer\bin\Debug\YamlDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

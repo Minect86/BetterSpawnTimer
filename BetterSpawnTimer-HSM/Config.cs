@@ -1,6 +1,8 @@
 ﻿using Exiled.API.Interfaces;
+using HintServiceMeow.Core.Enum;
+using System.ComponentModel;
 
-namespace BetterSpawnTimer
+namespace BetterSpawnTimer_HSM
 {
     public class Config : IConfig
     {
@@ -12,6 +14,11 @@ namespace BetterSpawnTimer
         public string CiTimeColor { get; set; } = "#608F38";
         public string MtfMiniText { get; set; } = " ";
         public string CiMiniText { get; set; } = " ";
-        public int HintHeight { get; set; } = 33;
+
+        [Description("Hint confis")]
+        public float XPos { get; set; } = 0;
+        public float YPos { get; set; } = 100;
+        public HintAlignment Alignment { get; set; } = HintAlignment.Center;
+        public HintVerticalAlign VerticalAlign { get; set; } = HintVerticalAlign.Middle;
     }
 }
