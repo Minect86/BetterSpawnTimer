@@ -1,7 +1,7 @@
 # BetterSpawnTimer
 [![C# Language](https://img.shields.io/badge/Language-C%23-8A2BE2?style=flat&labelColor=6A1FBF&logo=csharp&logoColor=white)](https://dotnet.microsoft.com/en-us/languages/csharp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-228B22?style=flat&labelColor=1C6B1C)](https://github.com/Minect86/BetterSpawnTimer/blob/master/LICENSE.txt)
-[![Version](https://img.shields.io/badge/Version-1.0.1-1E90FF?style=flat&labelColor=1870CC)](https://github.com/Minect86/BetterSpawnTimer/releases/tag/1.0.1)
+[![Version](https://img.shields.io/badge/Version-1.0.2-1E90FF?style=flat&labelColor=1870CC)](https://github.com/Minect86/BetterSpawnTimer/releases/tag/1.0.2)
 [![Game SCP:SL](https://img.shields.io/badge/Game-SCP:SL-FFA500?style=flat&labelColor=CC8400)](https://store.steampowered.com/app/700330/SCP_Secret_Laboratory/)
 [![Framework Exiled](https://img.shields.io/badge/Framework-Exiled-FF0000?style=flat&labelColor=990000)](https://github.com/ExMod-Team/EXILED)
 
