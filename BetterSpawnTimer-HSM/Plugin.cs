@@ -5,7 +5,7 @@ namespace BetterSpawnTimer_HSM
 {
     public class Plugin : Plugin<Config>
     {
-        public override Version RequiredExiledVersion => new Version(9, 8, 1);
+        public override Version RequiredExiledVersion => new Version(9, 9, 1);
         public override Version Version => new Version(1, 0, 3);
         public override string Author => "minect86";
         public override string Name => "BetterSpawnTimerHms";
