@@ -39,10 +39,18 @@ During mini squads, the text is not shown, but you can set it yourself in the co
 ### Default Config / Дефолтная конфигурация
 
 ```yaml
-mtf: '<color=#6D9FF7>Mobile Task Force</color>'
-ci: '<color=#608F38>Chaos Insurgency</color>'
+mtf_text: '<color=#6D9FF7>Mobile Task Force</color>'
+ci_text: '<color=#608F38>Chaos Insurgency</color>'
 mtf_time_color: '#6D9FF7'
 ci_time_color: '#608F38'
-mtf_mini: ' '
-ci_mini: ' '
-height: 33
+mtf_mini_text: ' '
+ci_mini_text: ' '
+
+#For hint
+hint_height: 33
+
+#For HSM
+x_pos: 0
+y_pos: 30
+alignment: Center
+vertical_align: Middle
