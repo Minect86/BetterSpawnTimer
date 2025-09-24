@@ -39,17 +39,31 @@ During mini squads, the text is not shown, but you can set it yourself in the co
 ### Default Config / Дефолтная конфигурация
 
 ```yaml
+# Display text for Mobile Task Force
 mtf_text: '<color=#6D9FF7>Mobile Task Force</color>'
+# Display text for Chaos Insurgency
 ci_text: '<color=#608F38>Chaos Insurgency</color>'
+# Timer color for Mobile Task Force
 mtf_time_color: '#6D9FF7'
+# Timer color for Chaos Insurgency
 ci_time_color: '#608F38'
+# Display text for Mobile Task Force Mini
 mtf_mini_text: ' '
+# Display text for Chaos Insurgency Mini
 ci_mini_text: ' '
+# Formatting text for a timer
+text_formatting: '<b><size=50%>%timer%</size></b>'
 
-#For hint
+#--- For hint ---
+# Height for Hint
 hint_height: 33
 
-#For HSM
+#--- For Ruei ---
+#Height for Hint
+postion: 970
+
+#--- For HSM ---
+#Hint confis
 x_pos: 0
 y_pos: 30
 alignment: Center
