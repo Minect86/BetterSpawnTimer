@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -62,8 +63,9 @@
     <Reference Include="Exiled.Permissions">
       <HintPath>..\BetterSpawnTimer\bin\Debug\Exiled.Permissions.dll</HintPath>
     </Reference>
-    <Reference Include="HintServiceMeow-Exiled">
-      <HintPath>..\BetterSpawnTimer\bin\Debug\HintServiceMeow-Exiled.dll</HintPath>
+    <Reference Include="HintServiceMeow-Exiled, Version=5.4.4.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\HintServiceMeow-Exiled.dll</HintPath>
     </Reference>
     <Reference Include="LabApi">
       <HintPath>..\BetterSpawnTimer\bin\Debug\LabApi.dll</HintPath>

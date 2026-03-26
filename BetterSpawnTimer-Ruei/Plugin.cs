@@ -17,7 +17,6 @@ namespace BetterSpawnTimer_Ruei
         public override void OnEnabled()
         {
             Instance = this;
-            RueIMain.EnsureInit();
             RegisterEvents();
             base.OnEnabled();
         }
@@ -32,16 +31,14 @@ namespace BetterSpawnTimer_Ruei
         {
             _eventHandler = new EventHandlers();
             Exiled.Events.Handlers.Server.WaitingForPlayers += _eventHandler.OnWaitingForPlayers;
-            Exiled.Events.Handlers.Server.RoundStarted += _eventHandler.OnRoundStarted;
-            Exiled.Events.Handlers.Server.RestartingRound += _eventHandler.OnRestartingRound;
-            Exiled.Events.Handlers.Server.RoundEnded += _eventHandler.OnRoundEnded;
+            LabApi.Events.Handlers.PlayerEvents.ChangedRole += _eventHandler.OnChangedRole;
+            Exiled.Events.Handlers.Player.Verified += _eventHandler.OnVerified;
         }
         private void UnregisterEvents()
         {
             Exiled.Events.Handlers.Server.WaitingForPlayers -= _eventHandler.OnWaitingForPlayers;
-            Exiled.Events.Handlers.Server.RoundStarted -= _eventHandler.OnRoundStarted;
-            Exiled.Events.Handlers.Server.RestartingRound -= _eventHandler.OnRestartingRound;
-            Exiled.Events.Handlers.Server.RoundEnded -= _eventHandler.OnRoundEnded;
+            LabApi.Events.Handlers.PlayerEvents.ChangedRole -= _eventHandler.OnChangedRole;
+            Exiled.Events.Handlers.Player.Verified -= _eventHandler.OnVerified;
             _eventHandler = null;
         }
     }
